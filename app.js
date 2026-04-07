@@ -52,7 +52,7 @@ app.get("/", async (req, res) => {
 
     res.send(`
       <div style="font-family: Arial, sans-serif; text-align: center; margin-top: 50px;">
-        <h1 style="color: red; font-size: 48px;">TEST DÉPLOIEMENT AUTOMATIQUE EN AZURE</h1>
+        <h1 style="color: red; font-size: 48px;">Testing Docker Image</h1>
         <h2 style="color: gray; font-size: 24px;">Par El Mahdi Aarich</h2>
         <h2 style="color: darkblue;">Compteur de visites</h2>
         <p style="font-size: 24px;"><strong>Nombre de visites :</strong> <span style="color: green;">${count}</span></p>
