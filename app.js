@@ -59,7 +59,7 @@ app.get("/", async (req, res) => {
         <hr style="width: 50%; margin: 20px auto;">
         <h3 style="color: purple;">Infos serveur</h3>
         <p>Hostname: https://elmahdiaarich-docker-bqc2ckhnexa5e3ft.francecentral-01.azurewebsites.net/</p>
-        <p>Port: ${port}</p>
+        <p>Port: 3000</p>
         <p>IP serveur: ${serverIP}</p>
         <hr style="width: 50%; margin: 20px auto;">
         <h3 style="color: purple;">Infos client</h3>
