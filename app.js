@@ -45,23 +45,26 @@ app.get("/", async (req, res) => {
     count++;
     writeCounter(count);
 
-    // Infos serveur et client
     const hostname = req.hostname;
     const port = req.socket.localPort;
     const serverIP = req.socket.localAddress;
     const clientIP = req.headers["x-forwarded-for"] || req.socket.remoteAddress;
 
     res.send(`
-      <h2>Compteur de visites</h2>
-      <p><strong>Nombre de visites :</strong> ${count}</p>
-      <hr>
-      <h3>Infos serveur</h3>
-      <p>Hostname: ${hostname}</p>
-      <p>Port: ${port}</p>
-      <p>IP serveur: ${serverIP}</p>
-      <hr>
-      <h3>Infos client</h3>
-      <p>IP client: ${clientIP}</p>
+      <div style="font-family: Arial, sans-serif; text-align: center; margin-top: 50px;">
+        <h1 style="color: red; font-size: 48px;">TEST DÉPLOIEMENT AUTOMATIQUE EN LOCAL</h1>
+        <h2 style="color: gray; font-size: 24px;">Par El Mahdi Aarich</h2>
+        <h2 style="color: darkblue;">Compteur de visites</h2>
+        <p style="font-size: 24px;"><strong>Nombre de visites :</strong> <span style="color: green;">${count}</span></p>
+        <hr style="width: 50%; margin: 20px auto;">
+        <h3 style="color: purple;">Infos serveur</h3>
+        <p>Hostname: ${hostname}</p>
+        <p>Port: ${port}</p>
+        <p>IP serveur: ${serverIP}</p>
+        <hr style="width: 50%; margin: 20px auto;">
+        <h3 style="color: purple;">Infos client</h3>
+        <p>IP client: ${clientIP}</p>
+      </div>
     `);
   } finally {
     lock = false;
